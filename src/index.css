@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap'); */
 
 @layer base {
   body {
-    @apply font-[Raleway];
+    /* @apply font-[Raleway]; */
+    font-family:Raleway, serif;
   }
   li {
     @apply px-4;
     @apply cursor-pointer
   }
+}
+
+@font-face{
+  font-family: 'Raleway';
+  src: local('Raleway'), url(./fonts/Raleway-VariableFont_wght.ttf) format('truetype');
 }
 
 .content-div {
@@ -22,6 +28,13 @@
   background-position: top;
 }
 
+.content-div-left {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 250px;
+}
+
 /* .content-div:hover {
   background-image: linear-gradient(
     to right, rgba(112, 157, 255, 0.8), hsla(242, 74%, 61%, .8)
@@ -29,7 +42,11 @@
 } */
 .content-div:hover {
   background-image: linear-gradient(
-    37deg, rgba(112, 255, 155, 0.8), hsla(242, 74%, 61%, .8)
+    /* 37deg, rgba(198, 61, 61, 0.8), hsla(242, 74%, 61%, .8) */
+    /* 37deg, #D4145A, #FBB03B */
+    37deg, #EA8D8D, #A890FE
+    /* 37deg, #7730a7, #c0258f */
+    /* 37deg, #D8B5FF, #1EAE98 */
   )!important;
 }
 /* .content-div:hover {

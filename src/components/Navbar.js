@@ -1,25 +1,26 @@
 import { useState } from "react";
-import Logo from "../assets/Logo.jpg";
-import { FaBars, FaTimes, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaBars, FaTimes, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { BsGithub } from "react-icons/bs";
 import { VscFilePdf } from "react-icons/vsc";
 // import { GoArrowUp} from "react-icons/go";
 import { Link } from "react-scroll";
 import myResume from "../assets/CV_Adlene_English.pdf";
+import Adlene from "../assets/Adlene.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="z-10 fixed w-full  h-[80px] flex justify-between items-center px-4 bg-[#0a192c] text-gray-300">
+    <div className="z-10 fixed w-full  h-[80px] flex justify-between items-center px-4 bg-gradient-to-b from-[#0e0821] bg-[#0a192f] text-gray-300">
       <div>
-        {/* <img
-          src={Logo}
+        <img
+          src={Adlene}
           alt="LogoImg"
-          className="hover:animate-pulse rounded-[50%] ml-4"
+          className="hover:animate-pulse ml-6 lg:ml-12"
           style={{ width: "60px" }}
-        /> */}
+        />
       </div>
 
       {/* Menu */}
@@ -63,7 +64,7 @@ const Navbar = () => {
 
       {/* Hamburger */}
       <div onClick={handleClick} className="md:hidden z-10">
-        {!nav ? <FaBars /> : <FaTimes />}
+        {!nav ? <FaBars size={25} /> : <FaTimes size={25} />}
       </div>
 
       {/* Mobile menu */}
@@ -111,40 +112,40 @@ const Navbar = () => {
         <ul>
           <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
-              className="flex justify-between items-center w-full text-gray-300 font-bold"
-              href="https://www.linkedin.com/in/adlene-feliachi-520512171/"
+              className="flex justify-between items-center w-full text-gray-300 font-bold pl-2"
+              href="https://www.linkedin.com/in/adlene-feliachi/"
               target="_blank"
               rel="noreferrer"
             >
-              Linkedin{" "}
-              <FaLinkedin size={30} className="group-hover:animate-spin" />
+              Linkedin{""}
+              <FaLinkedin size={30} className="group-hover:animate-wiggle" />
             </a>
           </li>
-          <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-900">
+          <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#171515]">
             <a
-              className="flex justify-between items-center w-full text-gray-300 font-bold"
-              href="https://www.facebook.com/madagascaaar/"
+              className="flex justify-between items-center w-full text-gray-300 font-bold pl-2"
+              href="https://github.com/DlanFeliacci"
               target="_blank"
               rel="noreferrer"
             >
-              Facebook{" "}
-              <FaFacebook size={30} className="group-hover:animate-spin" />
+              Github{" "}
+              <BsGithub size={30} className="group-hover:animate-spin-slow" />      
             </a>
           </li>
           <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-500">
             <a
-              className="flex justify-between items-center w-full text-gray-300 font-bold"
+              className="flex justify-between items-center w-full text-gray-300 font-bold pl-2"
               href="mailto:adlafeliachi@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               Email{" "}
-              <HiOutlineMail size={30} className="group-hover:animate-bounce" />
+              <HiOutlineMail size={30} className="group-hover:scale-150 duration-1000" />
             </a>
           </li>
           <li className="group w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-emerald-500">
             <a
-              className="flex justify-between items-center w-full text-gray-300 font-bold"
+              className="flex justify-between items-center w-full text-gray-300 font-bold pl-2"
               href={myResume}
               target="_blank"
               rel="noopener noreferrer"

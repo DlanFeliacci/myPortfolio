@@ -1,6 +1,7 @@
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import {Link} from 'react-scroll'
-import Logo from '../assets/Logo.jpg'
+// import Logo from '../assets/Logo.jpg'
+import Logo from '../assets/AdleneRounded.png'
 
 const Home = () => {
   return (
@@ -8,8 +9,10 @@ const Home = () => {
 
         {/* Container */}
         <div className='max-w-[1100px] mx-auto px-8 pt-26 flex flex-col justify-center h-full text-center gap-7'>
-            <div><img src={Logo} alt="" style={{ width: "200px" }}  className="hover:animate-pulse rounded-[50%] mx-auto" /></div>
-            <p className='text-2xl sm:text-5xl font-bold text-[#F5F5F5] '>Hi, my name is Adlene,</p>
+            <div className='w-[200px] mx-auto '>
+                <img src={Logo} alt="myPic" className="hover:animate-pulse " />
+            </div>
+            <p className='text-2xl sm:text-5xl font-bold text-[#F5F5F5] '>Hi, my name is Adlene</p>
             <p className='text-4xl sm:text-6xl font-bold text-[#8892b0]'>Welcome to my website</p>
             {/* <p className='md:text-2x1 sm:text-4xl font-bold text-pink-600'>& also</p>
             <p className='text-4xl sm:text-6xl font-bold text-[#8892b0]'>a Front End Developer.</p> */}
