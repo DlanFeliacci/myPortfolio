@@ -1,6 +1,6 @@
 import Photoshop from "../assets/PhotoshopLogo.png";
 import Illustrator from "../assets/IllustratorLogo.png";
-import Python from "../assets/python-480.png";
+import Cpp from "../assets/Cpp.png";
 import Html from "../assets/html.png";
 import Css from "../assets/css.png";
 import Javascript from "../assets/javascript.png";
@@ -37,8 +37,8 @@ const Skills = () => {
                   <p className='my-4'>JAVASCRIPT</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-20 mx-auto mt-2' src={Python} alt="HTML icon" />
-                  <p className='my-4'>PYTHON</p>
+                  <img className='w-20 mx-auto mt-2' src={Cpp} alt="HTML icon" />
+                  <p className='my-4'>C++</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto mt-2' src={React} alt="react icon" />
