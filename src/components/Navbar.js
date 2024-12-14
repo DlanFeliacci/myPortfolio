@@ -5,7 +5,7 @@ import { BsGithub } from "react-icons/bs";
 import { VscFilePdf } from "react-icons/vsc";
 // import { GoArrowUp} from "react-icons/go";
 import { Link } from "react-scroll";
-import myResume from "../assets/CV_Adlene_English.pdf";
+import myResume from "../assets/CV_Adlene_Eng_2024.pdf";
 import Adlene from "../assets/Adlene.png";
 
 const Navbar = () => {

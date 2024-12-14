@@ -12,7 +12,7 @@ const Home = () => {
             <div className='w-[200px] mx-auto '>
                 <img src={Logo} alt="myPic" className="hover:animate-pulse " />
             </div>
-            <p className='text-2xl sm:text-5xl font-bold text-[#F5F5F5] '>Hi, my name is Adlene</p>
+            <p className='text-2xl sm:text-5xl font-bold text-[#F5F5F5] '>Hi, I am a Freelancer</p>
             <p className='text-4xl sm:text-6xl font-bold text-[#8892b0]'>Welcome to my website</p>
             {/* <p className='md:text-2x1 sm:text-4xl font-bold text-pink-600'>& also</p>
             <p className='text-4xl sm:text-6xl font-bold text-[#8892b0]'>a Front End Developer.</p> */}

@@ -7,7 +7,7 @@ import Javascript from "../assets/javascript.png";
 import React from "../assets/react.png";
 import Tailwind from "../assets/tailwind.png";
 import git from "../assets/git.png";
-import Firebase from "../assets/Firebase.png";
+import Davinci from "../assets/DaVinci_Resolve.png";
 import Figma from "../assets/figma.png";
 import Nextjs from "../assets/nextjs.png"
 import {GiPlainArrow} from 'react-icons/gi'
@@ -57,8 +57,8 @@ const Skills = () => {
                   <p className='my-4'>GIT</p>
               </div>
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                  <img className='w-14 mx-auto mt-2' src={Firebase} alt="HTML icon" />
-                  <p className='my-[18px] '>FIREBASE</p>
+                  <img className='w-20 mx-auto mt-1' src={Davinci} alt="HTML icon" />
+                  <p className='my-[18px] '>VIDEO EDITING</p>
               </div>   
               <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
                   <img className='w-20 mx-auto mt-2' src={Photoshop} alt="HTML icon" />
