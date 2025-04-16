@@ -20,6 +20,14 @@
   src: local('Raleway'), url(./fonts/Raleway-VariableFont_wght.ttf) format('truetype');
 }
 
+.content-iv{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  background-position: top;
+}
+
 .content-div {
   background-repeat: no-repeat;
   background-size: cover;

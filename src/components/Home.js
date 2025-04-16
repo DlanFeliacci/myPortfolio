@@ -1,7 +1,7 @@
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import {Link} from 'react-scroll'
 // import Logo from '../assets/Logo.jpg'
-import Logo from '../assets/AdleneRounded.png'
+import Logo from '../assets/me_turkey.png'
 
 const Home = () => {
   return (
