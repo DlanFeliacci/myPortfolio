@@ -2,7 +2,8 @@ import { useState } from "react";
 import { FaBars, FaTimes, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsGithub } from "react-icons/bs";
-import { VscFilePdf } from "react-icons/vsc";
+import { BsBehance } from "react-icons/bs";
+// import { VscFilePdf } from "react-icons/vsc";
 // import { GoArrowUp} from "react-icons/go";
 import { Link } from "react-scroll";
 import myResume from "../assets/CV_Adlene_Eng_2024.pdf";
@@ -50,9 +51,9 @@ const Navbar = () => {
             Contact
           </Link>
         </li>
-        <li className="active:scale-95 duration-300 text-emerald-500">
+        {/* <li className="active:scale-95 duration-300 text-emerald-500">
           <a href={myResume} target="_blank" rel="noopener noreferrer">Resume</a>
-        </li>
+        </li> */}
         {/* <li className="hover:text-pink-600 duration-300">
           <Link to="home" smooth={true} duration={500}>
             <div className="relative ">
@@ -135,15 +136,26 @@ const Navbar = () => {
           <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-500">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold pl-2"
-              href="mailto:adlafeliachi@gmail.com"
+              href="https://www.behance.net/adlenefeliachi"
               target="_blank"
               rel="noopener noreferrer"
             >
               Email{" "}
-              <HiOutlineMail size={30} className="group-hover:scale-150 duration-1000" />
+              <HiOutlineMail size={30} className="group-hover:scale-125 duration-1000" />
             </a>
           </li>
-          <li className="group w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-emerald-500">
+          <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-white">
+            <a
+              className="flex justify-between items-center w-full text-gray-600 font-bold pl-2"
+              href="mailto:adlafeliachi@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Behance{" "}
+              <BsBehance size={30} className="group-hover:animate-none duration-1000" />
+            </a>
+          </li>
+          {/* <li className="group w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-emerald-500">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold pl-2"
               href={myResume}
@@ -153,7 +165,7 @@ const Navbar = () => {
               Resume
               <VscFilePdf size={30} className="group-hover:animate-bounce" />
             </a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

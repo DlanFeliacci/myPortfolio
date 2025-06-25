@@ -209,20 +209,20 @@ const Work = () => {
 
         </div>
         
-        <div className="flex flex-col">
-          <div className="flex justify-center"><img src={decoration} alt="" className="w-[350px]"/></div>
+        {/* <div className="flex flex-col">
+          <div className="flex justify-center">
+            <img src={decoration} alt="" className="w-[350px] hidden md:block"/>
+          </div>
           <div className="mx-auto  text-xl font-bold hover:text-pink-600 duration-300">
             <a href="https://www.behance.net/adlenefeliachi" target="_blank" rel="noopener noreferrer">
-              <img className="w-24 border-black fill-gray-500 hover:scale-125 duration-700" src={Behance} alt="Behance icon" />
+              <img className="w-24 border-black fill-gray-500 hover:scale-125 duration-700 p-2" src={Behance} alt="Behance icon" />
             </a>
           </div>
-          {/* <div className="mx-auto mt-12 text-xl font-bold hover:text-pink-600 duration-300">
-            <a href="https://www.behance.net/adlenefeliachi" target="_blank" rel="noopener noreferrer">
-              <img className="w-20 border-black fill-gray-500 hover:scale-125 duration-700" src={Behance} alt="Behance icon" />
-            </a>
-          </div> */}
-          <div className="flex justify-center"><img src={decoration} alt="" className="w-[350px]"/></div>
-        </div>
+          <div className="flex justify-center sm:hidde">
+            <img src={decoration} alt="" className="w-[350px] hidden md:block"/>
+          </div>
+        </div> */}
+
       </div>
     </div>
   );
