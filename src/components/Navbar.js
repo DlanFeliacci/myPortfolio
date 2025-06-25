@@ -136,7 +136,7 @@ const Navbar = () => {
           <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-red-500">
             <a
               className="flex justify-between items-center w-full text-gray-300 font-bold pl-2"
-              href="https://www.behance.net/adlenefeliachi"
+              href="mailto:adlafeliachi@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -147,7 +147,7 @@ const Navbar = () => {
           <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-white">
             <a
               className="flex justify-between items-center w-full text-gray-600 font-bold pl-2"
-              href="mailto:adlafeliachi@gmail.com"
+              href="https://www.behance.net/adlenefeliachi"
               target="_blank"
               rel="noopener noreferrer"
             >
