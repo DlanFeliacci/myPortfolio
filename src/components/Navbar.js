@@ -7,25 +7,25 @@ import { BsBehance } from "react-icons/bs";
 // import { GoArrowUp} from "react-icons/go";
 import { Link } from "react-scroll";
 import myResume from "../assets/CV_Adlene_Eng_2024.pdf";
-import Adlene from "../assets/Adlene.png";
+// import Adlene from "../assets/Adlene.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="z-10 fixed w-full  h-[80px] flex justify-between items-center px-4 bg-gradient-to-b from-[#0e0821] bg-[#0a192f] text-gray-300">
-      <div>
+    <div className="z-10 fixed w-full  h-[80px] flex justify-end items-center px-4 bg-gradient-to-b from-[#0e0821] bg-[#0a192f] text-gray-300">
+      {/* <div>
         <img
           src={Adlene}
           alt="LogoImg"
           className="hover:animate-pulse ml-6 lg:ml-12"
           style={{ width: "60px" }}
         />
-      </div>
+      </div> */}
 
       {/* Menu */}
-      <ul className="hidden md:flex font-bold">
+      <ul className="hidden md:flex font-bold gap-8">
         <li className="hover:text-pink-600 duration-300"> 
           <Link to="home" smooth={true} duration={500}>
             Home
