@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsGithub } from "react-icons/bs";
@@ -6,12 +6,26 @@ import { BsBehance } from "react-icons/bs";
 // import { VscFilePdf } from "react-icons/vsc";
 // import { GoArrowUp} from "react-icons/go";
 import { Link } from "react-scroll";
-import myResume from "../assets/CV_Adlene_Eng_2024.pdf";
 // import Adlene from "../assets/Adlene.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [behanceActive, setBehanceActive] = useState(false);
   const handleClick = () => setNav(!nav);
+
+  useEffect(() => {
+    // show the behance list for 2s every 5s
+    let showTimeout;
+    const interval = setInterval(() => {
+      setBehanceActive(true);
+      showTimeout = setTimeout(() => setBehanceActive(false), 2000);
+    }, 5000);
+
+    return () => {
+      clearInterval(interval);
+      if (showTimeout) clearTimeout(showTimeout);
+    };
+  }, []);
 
   return (
     <div className="z-10 fixed w-full  h-[80px] flex justify-end items-center px-4 bg-gradient-to-b from-[#0e0821] bg-[#0a192f] text-gray-300">
@@ -73,9 +87,11 @@ const Navbar = () => {
         className={
           !nav
             ? "hidden"
-            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center"
+            : "absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col items-center"
         }
       >
+        {/* Menu Mobile */}
+        <div className="mt-20 flex flex-col items-center">
         <Link to="home" smooth={true} duration={500}>
           <li onClick={handleClick} className="py-6 text-4xl">
             Home
@@ -101,11 +117,54 @@ const Navbar = () => {
             Contact
           </li>
         </Link>
-        <Link to="download" smooth={true} duration={500}>
-          <li onClick={handleClick} rel="noopener noreferrer" className="py-6 text-4xl">
-          <a href={myResume}>Resume</a>
-          </li>
-        </Link>
+   
+        {/* --- Mobile social icons (visible when menu open) --- */}
+        </div>
+        <div className="flex items-center justify-center gap-8 my-14 mb-12">
+          <a
+            href="https://www.linkedin.com/in/adlene-feliachi/"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-col items-center text-gray-300 hover:text-pink-600"
+            onClick={handleClick}
+          >
+            <FaLinkedin size={34} />
+            <span className="text-sm mt-1">LinkedIn</span>
+          </a>
+
+          <a
+            href="https://github.com/DlanFeliacci"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-col items-center text-gray-300 hover:text-pink-600"
+            onClick={handleClick}
+          >
+            <BsGithub size={34} />
+            <span className="text-sm mt-1">GitHub</span>
+          </a>
+
+          <a
+            href="mailto:adlafeliachi@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-col items-center text-gray-300 hover:text-pink-600"
+            onClick={handleClick}
+          >
+            <HiOutlineMail size={34} />
+            <span className="text-sm mt-1">Email</span>
+          </a>
+
+          <a
+            href="https://www.behance.net/adlenefeliachi"
+            target="_blank"
+            rel="noreferrer"
+            className="flex flex-col items-center text-gray-300 hover:text-pink-600"
+            onClick={handleClick}
+          >
+            <BsBehance size={34} />
+            <span className="text-sm mt-1">Behance</span>
+          </a>
+        </div>
       </ul>
 
       {/* Social icons */}
@@ -144,7 +203,12 @@ const Navbar = () => {
               <HiOutlineMail size={30} className="group-hover:scale-125 duration-1000" />
             </a>
           </li>
-          <li className="group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-white">
+          <li
+            className={
+              `group w-[160px] h-[60px] md:h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-white ` +
+              (behanceActive ? "ml-[-80px]" : "ml-[-100px]")
+            }
+          >
             <a
               className="flex justify-between items-center w-full text-gray-600 font-bold pl-2"
               href="https://www.behance.net/adlenefeliachi"
